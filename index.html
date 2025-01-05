@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Money Tracker</h1>
+            <button id="thanks-btn" class="btn">Say thanks to developer</button>
+        </header>
+        <main>
+            <section class="form-section">
+                <form id="monkey-form">
+                    <div class="form-group">
+                        <label for="date">Date (mm/dd/yyyy):</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Note:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="count">Expended:</label>
+                        <input type="number" id="count" name="count" required>
+                    </div>
+                    <button type="submit" class="btn">Update</button>
+                </form>
+            </section>
+            <section class="filters">
+                <div class="form-group">
+                    <label for="filter-date">Filter by Date:</label>
+                    <input type="date" id="filter-date">
+                </div>
+                <div class="form-group">
+                    <label for="search-location">Search by Note:</label>
+                    <input type="text" id="search-location" placeholder="Enter note">
+                </div>
+                <button id="clear-filters" class="btn">Clear Filters</button>
+            </section>
+            <button id="download-pdf" class="btn download-btn">Download PDF</button>
+            <section class="monkey-list">
+                <h2>Expended Money</h2>
+                <table id="monkey-table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Date</th>
+                            <th onclick="sortTable(1)">Note</th>
+                            <th onclick="sortTable(2)">Money</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Monkey sightings will be added here -->
+                    </tbody>
+                </table>
+            </section>
+            <section id="calendar"></section>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script> document.getElementById('thanks-btn').addEventListener('click', function() { window.location.href = 'https://www.linkedin.com/in/revanveerachari/'; }); </script>
+</body>
+</html>
