@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #5d5d5e, #ffffff);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-section, .filters {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: fadeIn 1.5s ease-in-out;
+    color: #fff;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border-color: #8f8e8f;
+    background: rgba(255, 255, 255, 0.9);
+}
+button.btn {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+    background: linear-gradient(135deg, #e52e71, #ff8a00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.download-btn {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+th:hover {
+    background: rgba(46, 46, 46, 0.2);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filters .form-group {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 200px;
+}
